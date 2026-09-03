@@ -1,0 +1,10 @@
+{
+  "name": "cotton-risk-management",
+  "private": true,
+  "version": "3.0.0",
+  "scripts": {
+    "check": "node scripts/check-no-github-data.mjs",
+    "dev": "npx wrangler pages dev public"
+  },
+  "devDependencies": { "wrangler": "^4.0.0" }
+}

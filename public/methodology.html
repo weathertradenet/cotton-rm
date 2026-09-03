@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Methodology & FAQ · Cotton Risk Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/layer-overrides.css">
+</head>
+<body class="methodology-page">
+  <main class="methodology-shell">
+    <header class="topbar methodology-header"><div><p class="eyebrow">Global Climate &amp; Nature Risk explorer</p><h1>Methodology & FAQ</h1></div><img class="everloop-logo" src="assets/everloop-logo.png" alt="Everloop"></header>
+    <nav class="layer-tabs" aria-label="Page navigation"><a class="layer-tab faq-tab active" href="index.html">← Back to map</a></nav>
+    <section class="methodology-intro"><h2>How the explorer is built</h2><p>The explorer harmonizes annual subnational cotton statistics from eleven countries into planted area in hectares and yield in tonnes per hectare. Open any question below; opening a new answer automatically closes the previous one.</p></section>
+    <section class="faq-list" aria-label="Frequently asked questions">
+      <details open><summary>1. Yield forecasting using weather anomalies</summary><div class="faq-answer"><p>Environmental conditions during the growing season can explain approximately 60% of crop failures. The remaining 40% may be attributed to poor management practices and political and economic factors, including the availability and cost of fertilisers and fuel.
+</p></div></details>
+      <details><summary>2. Data-driven yield modeling</summary><div class="faq-answer">Weather anomalies considered for cotton-yield modeling: <ul class="climate-factor-list">
+  <li>
+    <strong>Frost days:</strong>
+    Tmin &lt; 0°C
+  </li>
+
+  <li>
+    <strong>Dry days:</strong>
+    Precipitation &lt; 1 mm/day
+  </li>
+
+  <li>
+    <strong>Rainy days:</strong>
+    Precipitation &ge; 1 mm/day
+  </li>
+
+  <li>
+    <strong>Heavy-rain days:</strong>
+    Precipitation &ge; 10 mm/day
+  </li>
+
+  <li>
+    <strong>Extremely hot days:</strong>
+    Tmax &gt; 40°C
+  </li>
+
+  <li>
+    <strong>Hot nights:</strong>
+    Tmin &gt; 25°C
+  </li>
+
+  <li>
+    <strong>Insufficient-heat days:</strong>
+    Tmean &lt; 15.6°C
+  </li>
+
+  <li>
+    <strong>Windy days:</strong>
+    Daily maximum 10 m wind &ge; 30 mph
+  </li>
+
+  <li>
+    <strong>High-moisture days:</strong>
+    Daily mean relative humidity &ge; 80%
+  </li>
+
+  <li>
+    <strong>Insufficient-sunlight days:</strong>
+    Incoming solar radiation &lt; 60% of clear-sky radiation
+  </li>
+</ul></div></details>
+      <details><summary>3. Climate &amp; weather-related risk assessment: is it Open Data?</summary><div class="faq-answer"><p>Hourly and daily temperatures, wind and rainfall are indeed Open Data provided by Copernicus</p><p>So far, the RISK metric it's tailored to each specific Use Case. At Everloop we created this risk metric inhouse.</p><p>We provide FREE TRIALS: anyone can test our risk data via API using there very simple: <a href="https://www.weathertrade.net/api" target="_blank" rel="noopener noreferrer">instructions</a>.</p><p>For physical damage modeling and impact assessment, the climate risk data can be provided at 10–100 metre resolution (building level).</p><p>For larger agricultural areas, large infrastructure projects, and disruption risk analysis, the climate risk data can be provided for larger areas at 1–30 kilometre resolution.</p></div></details>
+      <details><summary>4. Cotton yield statistics: is it Open Data?</summary><div class="faq-answer">Cotton data for the US is created and provided by the United States Department of Agriculture National Agricultural Statistics Service, and can be <a href="https://quickstats.nass.usda.gov/#B1E96DD6-4119-3C54-99B9-D379BBA04194)" target="_blank" rel="noopener noreferrer">downloaded here</a>. For Brazil the source is the IBGE’s Municipal Agricultural Production dataset. Mexico: <a href="https://www.gob.mx/agricultura/dgsiap" target="_blank" rel="noopener noreferrer">SIAP</a>. </div></details>
+      <details><summary>5. Which geographic level is the best for crop modeling?</summary><div class="faq-answer">The best resolution is county and municipality level.</div></details>
+      <details><summary>6. How should I read the weather-anomaly heatmap?</summary><div class="faq-answer"><p>The historical reference is 1991–2025. Pale cells represent normal conditions within ±1 standard deviation; red represents above-normal anomalies and blue represents below-normal anomalies. Future five-year projection windows appear at the right.</p><p>Select “Overall growing season” for the complete cotton season, or use the growth-period selector to inspect a specific development phase. Select the question-mark tooltip beside an indicator to see its technical definition. Future columns use bias-corrected CMIP6 climate data supplied through Open-Meteo.</p></div></details>
+    </section>
+  </main>
+  <footer class="everloop-footer" aria-label="Everloop"><span class="footer-part">Developed by <a href="https://www.everloop.agency/" target="_blank" rel="noopener noreferrer">EVERLOOP</a></span><span class="footer-part">Schedule a demo <a href="mailto:hello@everloop.agency">hello@everloop.agency</a></span><span class="footer-part">Data &amp; Methodology: see <a href="methodology.html">FAQ</a></span></footer>
+  <script>document.querySelectorAll('.faq-list details').forEach(item=>item.addEventListener('toggle',()=>{if(item.open)document.querySelectorAll('.faq-list details').forEach(other=>{if(other!==item)other.open=false;});}));</script>
+</body>
+</html>

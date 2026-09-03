@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cotton Risk Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/layer-overrides.css">
+</head>
+<body><main class="shell">
+  <header class="topbar"><div><p class="eyebrow">Global Climate &amp; Nature Risk explorer</p><h1>Cotton Risk Management</h1></div><img class="everloop-logo" src="assets/everloop-logo.png" alt="Everloop"></header>
+  <section class="workspace"><div class="map-card"><div id="map" aria-label="Interactive map of subnational cotton regions"></div><nav class="map-layer-tabs" aria-label="Map layer"><button class="layer-tab yield active" data-metric="yield_t_ha">Yield</button><button class="layer-tab planted" data-metric="planted_area_ha">Planted area</button></nav><div class="map-playback" role="group" aria-label="Animated map year"><button class="map-play-toggle" id="mapPlayToggle" type="button" aria-label="Pause year animation"><span id="mapPlayIcon" aria-hidden="true">❚❚</span><span id="mapPlayLabel">Pause</span></button><label class="map-year-control" for="mapYearSlider"><span class="map-year-display" id="mapYearDisplay">2025</span><input id="mapYearSlider" type="range" min="2010" max="2025" step="1" value="2025" aria-label="Map data year"></label></div><div class="legend" id="legend"></div><div class="map-note" id="mapNote">Click a mapped area to see cotton production data</div></div>
+    <aside class="panel" id="details" aria-live="polite"></aside>
+  </section>
+</main>
+<footer class="everloop-footer" aria-label="Everloop"><span class="footer-part">Developed by <a href="https://www.everloop.agency/" target="_blank" rel="noopener noreferrer">EVERLOOP</a></span><span class="footer-part">Schedule a demo <a href="mailto:hello@everloop.agency">hello@everloop.agency</a></span><span class="footer-part">Data &amp; Methodology: see <a href="methodology.html">FAQ</a></span></footer>
+<div class="county-modal" id="countyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalCountyTitle"><div class="county-modal-card" id="countyModalCard"></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script><script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js"></script><script src="js/app.js"></script></body>
+</html>
