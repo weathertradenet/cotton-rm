@@ -8,7 +8,7 @@
   const apiJson = async route => { const r = await fetch(`${API}${route}`); if (!r.ok) throw new Error(`${route}: ${r.status}`); return r.json(); };
   const map = L.map('map', { zoomControl: false, minZoom: 2, maxZoom: 10 }).setView([25, 10], 2);
   L.control.zoom({ position: 'bottomright' }).addTo(map);
-  L.maplibreGL({ style: 'https://data.lfmaps.fr/styles/positron' }).addTo(map);
+  L.maplibreGL({ style: 'https://tiles.openfreemap.org/styles/positron' }).addTo(map);
 
   let selectedYear = 2025, metric = 'yield_t_ha', selectedId = null, boundaryLayer = null;
   let currentRecords = {}, currentFeatures = [], scaleBreaks = [0,0,0], playbackTimer = null, playing = false;
